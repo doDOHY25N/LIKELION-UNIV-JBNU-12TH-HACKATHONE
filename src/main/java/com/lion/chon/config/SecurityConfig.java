@@ -38,7 +38,7 @@ public class SecurityConfig {
                 .formLogin(form -> form
                         .loginPage("/login").permitAll()
                         .loginProcessingUrl("/login")
-                        .defaultSuccessUrl("/home", true)
+                        .defaultSuccessUrl("/", true)
                         .failureHandler((request, response, exception) -> {
                             response.sendRedirect("/login");
                         })
